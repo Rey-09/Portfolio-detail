@@ -141,37 +141,4 @@
     © 2025 CodingCamp-061025-rieka | Portfolio by Rieka Zalsa Nabila
   </footer>
 
-  <!-- ================= VALIDATION SCRIPT ================= -->
-  <script>
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const message = document.getElementById("message").value.trim();
-      const feedback = document.getElementById("formMessage");
-
-      if (!name || !email || !phone || !message) {
-        feedback.textContent = "⚠️ Please fill in all fields.";
-        feedback.classList.remove("hidden");
-        feedback.classList.add("text-red-400");
-        return;
-      }
-
-      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-      if (!email.match(emailPattern)) {
-        feedback.textContent = "⚠️ Please enter a valid email address.";
-        feedback.classList.remove("hidden");
-        feedback.classList.add("text-red-400");
-        return;
-      }
-
-      feedback.textContent = "✅ Message sent successfully!";
-      feedback.classList.remove("text-red-400");
-      feedback.classList.add("text-green-400");
-      feedback.classList.remove("hidden");
-      document.getElementById("contactForm").reset();
-    });
-  </script>
-</body>
-</html>
+  
